@@ -1,4 +1,5 @@
 $(function() {
+
   function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -22,4 +23,12 @@ $(function() {
     var v = v1+' '+v2
     $('#titre').html(v)
   })
+
+  $('.list-group li').click(function() {
+        $(this).siblings('li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+
+
 })
