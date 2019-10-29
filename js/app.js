@@ -40,4 +40,8 @@ $(function() {
   $(this).tab('show')
 })
 
+$("#showModal").click(function(){
+  $('#modal').modal('toggle')
+})
+
 })
