@@ -44,4 +44,8 @@ $("#showModal").click(function(){
   $('#modal').modal('toggle')
 })
 
+$("#myPopover").click(function(){
+  $('#myPopover').popover();
+})
+
 })
