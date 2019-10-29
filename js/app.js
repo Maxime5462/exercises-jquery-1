@@ -36,16 +36,31 @@ $(function() {
   })
 
   $('#myTab a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
+    e.preventDefault()
+    $(this).tab('show')
+  })
 
-$("#showModal").click(function(){
-  $('#modal').modal('toggle')
-})
+  $("#showModal").click(function(){
+    $('#modal').modal('toggle')
+  })
 
-$("#myPopover").click(function(){
-  $('#myPopover').popover();
-})
+  $("#myPopover").click(function(){
+    $('#myPopover').popover();
+  })
+
+
+  var progressBar = $("#progressBar");
+
+  setInterval(function () {
+    var width = parseInt(progressBar[0].style.getPropertyValue('width'))
+
+    if (width >= 100) {
+      progressBar.css('width', 0)
+    } else {
+      progressBar.css('width', '100%') //width + 5 + '%'
+    }
+  }, 1000)
+
+
 
 })
