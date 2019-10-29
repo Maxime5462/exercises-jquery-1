@@ -60,7 +60,16 @@ $(function() {
       progressBar.css('width', '100%') //width + 5 + '%'
     }
   }, 1000)
-
-
+  var isPlayed = true;
+  setInterval(function () {
+    if (isPlayed) {
+      $('#spinner').css('animation-play-state','paused');
+      isPlayed = false;
+    } else{
+      $('#spinner').css('animation-play-state','running');
+      isPlayed = true;
+    }
+  
+}, 5000)
 
 })
