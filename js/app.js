@@ -33,8 +33,11 @@ $(function() {
     var player = document.querySelector('#video');
     player.play();
     var x = setTimeout(function() { player.pause(); }, 10000);
-
-
   })
+
+  $('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
 
 })
