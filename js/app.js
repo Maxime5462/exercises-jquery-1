@@ -5,4 +5,10 @@ $(function() {
 
   $(".nav-link").removeClass("disabled");
 
+  $(".form-control").keyup(function(){
+    var value = $(".form-control").val()
+    $('span').html(value);
+
+  })
+
 })
