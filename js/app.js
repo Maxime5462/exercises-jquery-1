@@ -13,22 +13,28 @@ $(function() {
   $(".nav-link").removeClass("disabled");
 
   $(".form-control").keyup(function(){
-    var value = $(".form-control").val()
+    var value = $(".form-control").val();
     $('span').html(value);
   })
 
   $("#bt").click(function(){
-    var v1 = 'Web Developer'
-    var v2 = getRandomIntInclusive(0, 1000000000000)
-    var v = v1+' '+v2
-    $('#titre').html(v)
+    var v1 = 'Web Developer';
+    var v2 = getRandomIntInclusive(0, 1000000000000);
+    var v = v1+' '+v2;
+    $('#titre').html(v);
   })
 
   $('.list-group li').click(function() {
-        $(this).siblings('li').removeClass('active');
-        $(this).addClass('active');
-    });
+    $(this).siblings('li').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $("#bt-video").click(function(){
+    var player = document.querySelector('#video');
+    player.play();
+    var x = setTimeout(function() { player.pause(); }, 10000);
 
 
+  })
 
 })
